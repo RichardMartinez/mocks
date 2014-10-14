@@ -2,6 +2,11 @@
 
 This is a script for running an API mock server to respond statically to a given set of resources.
 
+## Usage
+
+    var mockServer = require('mocks');
+    mockServer('localhost', 9876, require('./mocks'), 'content-type');
+
 ## How it works
 
 In development, we don't really want to run real API requests. It's slow, and it's just no fun. So instead, we just run a fake web server and respond to each request in a pre-defined fashion.
